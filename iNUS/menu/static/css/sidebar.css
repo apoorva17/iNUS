@@ -1,0 +1,77 @@
+body{
+  overflow: scroll;
+  height: 100%;
+}
+
+.sidebar{
+ 	  list-style-type: none;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 25%;
+    background-color: #80ccff;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.form{
+    padding: 25px;
+    width: 90%;
+    position: relative;
+    background-color: #99d5ff;
+    overflow: auto;
+    margin-top: 50px;
+    margin-left: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.form h3{
+  font-size: 25px;
+}
+
+.form label{
+  font-size: 15px;
+}
+
+table, td{
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    background-color: #e6f5ff;
+    font-color: white;
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
+    padding: 15px;
+}
+
+th{
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    background-color: #cceaff;
+    font-color: white;
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .bs-sidebar.affix {
+    width: 158px;
+    top: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bs-sidebar.affix {
+    width: 213px;
+    position: fixed;
+    top: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bs-sidebar.affix {
+    width: 263px;
+  }
+}

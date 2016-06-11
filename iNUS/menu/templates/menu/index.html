@@ -1,0 +1,99 @@
+{% load staticfiles %}
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+
+  <title>Years</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" type="text/css" href= "{% static 'css/sidebar.css' %}"/> 
+  
+  <script type="text/javascript" src="{% static 'js/form.js' %}"></script>
+
+  </head>
+
+  <body>
+
+   <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-sm-4">
+           <div class = "sidebar">
+              <h2 class="text-center"> <em> iNUS </em> </h2>
+              <p class="text-center">Year of Study</p>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Year 1</a></li>
+                <li><a href="#">Year 2</a></li>
+                <li><a href="#">Year 3</a></li>
+                <li><a href="#">Year 4</a></li>
+                <li><a href="#">Year 5</a></li>
+                <li><a href="#">Year 6</a></li>
+                <li><a href="#">Module Recommendation</a></li>
+              </ul>
+           </div>
+        </div>
+
+        <div class = "col-sm-8">
+          <div class = "form">
+            <form class = "form-inline" id = "myForm" method = "get">
+              <fieldset>
+              <legend align = "center"> <h3> Semester 1 </h3></legend>
+              <div class="form-group">
+                <label for="Code">Module Code</label>
+                <input type="text" id = "inp1" placeholder = "ACC1002X" value="">
+              </div>
+              <div class="form-group">
+                <label for="Grade">Grade</label>
+                <select name="text" id = "inp2">
+                  <option selected>A+</option>
+                  <option>A</option>
+                  <option>A-</option>
+                  <option>B+</option>
+                  <option>B</option>
+                  <option>C+</option>
+                  <option>C</option>
+                  <option>D</option>
+                  <option>S</option>
+                  <option>U</option>
+                  <option>CS</option>
+                  <option>CU</option>
+                </select>
+              </div>
+            <div class="form-group">
+              <label for="mc">MC</label>
+              <input type="number" min = "0" name="mc" value="" id = "inp3">
+            </div>
+            <div class="form-group">
+              <button type = "button" onclick="addRow()" class= "btn btn-primary">Add</button>
+            </div>
+            <div class="form-group">
+              <div class = "table" id = "table1">
+              <table id = "table" border="1" style="width:100%">
+              <tr>
+              <th><b>Module Code</b></th>
+              <th><b>Grade</b></th> 
+              <th><b>MC</b></th>
+              <th><b>-</b></th>
+              </tr>
+              </table>
+              </div>
+            </div>
+            </fieldset>
+          </form>
+          </div>
+      </div>
+    </div>
+    </div>
+  </body>
+
+</html>
+
