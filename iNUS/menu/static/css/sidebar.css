@@ -4,7 +4,7 @@ body{
 }
 
 .sidebar{
- 	  list-style-type: none;
+    list-style-type: none;
     padding-bottom: 20px;
     padding-top: 20px;
     width: 25%;
@@ -15,7 +15,7 @@ body{
 }
 .form{
     padding: 25px;
-    width: 90%;
+    width: 60%;
     position: relative;
     background-color: #99d5ff;
     overflow: auto;
@@ -34,7 +34,7 @@ body{
 }
 
 table, td{
-    border: 1.5px solid black;
+    border: none;
     border-collapse: collapse;
     background-color: #e6f5ff;
     font-color: white;
@@ -45,7 +45,7 @@ table, td{
 }
 
 th{
-    border: 1.5px solid black;
+    border: none;
     border-collapse: collapse;
     background-color: #cceaff;
     font-color: white;
@@ -55,23 +55,3 @@ th{
     padding: 15px;
 }
 
-@media (min-width: 768px) {
-  .bs-sidebar.affix {
-    width: 158px;
-    top: 25px;
-  }
-}
-
-@media (min-width: 992px) {
-  .bs-sidebar.affix {
-    width: 213px;
-    position: fixed;
-    top: 25px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .bs-sidebar.affix {
-    width: 263px;
-  }
-}
