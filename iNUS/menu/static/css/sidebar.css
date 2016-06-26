@@ -3,55 +3,35 @@ body{
   height: 100%;
 }
 
-.sidebar{
-    list-style-type: none;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    width: 25%;
-    background-color: #80ccff;
-    position: fixed;
+.sidenav {
     height: 100%;
-    overflow: auto;
-}
-.form{
-    padding: 25px;
-    width: 60%;
-    position: relative;
-    background-color: #99d5ff;
-    overflow: auto;
-    margin-top: 50px;
-    margin-left: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #66bfff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.form h3{
-  font-size: 25px;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #99d5ff;
 }
 
-.form label{
-  font-size: 15px;
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
 }
-
-table, td{
-    border: none;
-    border-collapse: collapse;
-    background-color: #e6f5ff;
-    font-color: white;
-    margin-top: 20px;
-    width: 50%;
-    height: 50%;
-    padding: 15px;
-}
-
-th{
-    border: none;
-    border-collapse: collapse;
-    background-color: #cceaff;
-    font-color: white;
-    margin-top: 20px;
-    width: 50%;
-    height: 50%;
-    padding: 15px;
-}
-
