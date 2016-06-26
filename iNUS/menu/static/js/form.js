@@ -1,6 +1,16 @@
+ function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
 function addRow(i) {
 
-        switch(i){
+    switch(i){
         case 1:
         var table = document.getElementById("table");
         var row = document.createElement("tr");
@@ -105,20 +115,20 @@ function addRow(i) {
         document.getElementById("inp11").value = "A+";
         document.getElementById("inp12").value = "4";
         break;
-    
+
         default:
         
     }
 
 }
 
-    function deleteRow(node){    
-        r=node.parentNode.parentNode;
-        r.parentNode.removeChild(r);
-    }   
+function deleteRow(node){    
+    r=node.parentNode.parentNode;
+    r.parentNode.removeChild(r);
+}   
 
 
-    $(document).ready(function(){
+$(document).ready(function(){
 
     //Error handling
     var $code = document.getElementById("inp1").value;
@@ -159,6 +169,6 @@ function addRow(i) {
 
 });
 
-    $(document).ready(main);
+$(document).ready(main);
 
 
