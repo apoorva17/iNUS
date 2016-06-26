@@ -1,0 +1,42 @@
+.form{
+    padding: 25px;
+    width: 700px;
+    position: relative;
+    background-color: #99d5ff;
+    overflow: auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.form h3{
+  font-size: 25px;
+}
+
+.form label{
+  font-size: 15px;
+}
+
+table, td{
+    border: none;
+    border-collapse: collapse;
+    background-color: #e6f5ff;
+    font-color: white;
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
+    padding: 15px;
+}
+
+th{
+    border: none;
+    border-collapse: collapse;
+    background-color: #cceaff;
+    font-color: white;
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
+    padding: 15px;
+}
+
