@@ -18,6 +18,8 @@
   
   <link rel="stylesheet" type="text/css" href= "{% static 'css/sidebar.css' %}"/> 
   
+  <link rel="stylesheet" type="text/css" href= "{% static 'css/form.css' %}"/> 
+
   <script type="text/javascript" src="{% static 'js/form.js' %}"></script>
 
   <script type="text/javascript" src="{% static 'js/dropdown.js' %}"></script>
@@ -26,26 +28,23 @@
 
 <body>
 
- <div class = "container-fluid">
-  <div class = "row">
-    <div class = "col-sm-4">
-     <div class = "sidebar">
-      <h2 class="text-center"> <em> iNUS </em> </h2>
-      <p class="text-center">Year of Study</p>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#">Year 1</a></li>
-        <li><a href="#">Year 2</a></li>
-        <li><a href="#">Year 3</a></li>
-        <li><a href="#">Year 4</a></li>
-        <li><a href="#">Year 5</a></li>
-        <li><a href="#">Year 6</a></li>
-        <li><a href="#">Module Recommendation</a></li>
-      </ul>
-    </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#main">Year 1</a></li>
+      <li><a href="#main">Year 2</a></li>
+      <li><a href="#main">Year 3</a></li>
+      <li><a href="#main">Year 4</a></li>
+      <li><a href="#main">Year 5</a></li>
+      <li><a href="#main">Year 6</a></li>
+      <li><a href="#main">Module Recommendation</a></li>
+    </ul>
   </div>
-
-  <div class = "col-sm-8">
-    <div class = "form">
+  
+  <div id = "main">
+    <div class = "col-sm-8">
+     <span style="font-size:30px; cursor:pointer;margin-left: 50px;" onclick="openNav()">MYNUS &hearts;</span>
+     <div class = "form">
       <form class = "form-inline" id = "myForm" method = "get">
         <fieldset>
           <legend align = "center"> <h3> Semester 1 </h3></legend>
@@ -111,8 +110,8 @@
       </div>
     </div>
   </div>
-</div>
-</body>
 
+
+</body>
 </html>
 
