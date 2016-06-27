@@ -1,6 +1,6 @@
 .form{
     padding: 25px;
-    width: 700px;
+    width: 900px;
     position: relative;
     background-color: #99d5ff;
     overflow: auto;
@@ -15,7 +15,19 @@
 }
 
 .form label{
-  font-size: 15px;
+  font-size: 20px;
+}
+
+input{
+    padding: 8px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+select{
+    padding: 8px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 table, td{
@@ -24,7 +36,7 @@ table, td{
     background-color: #e6f5ff;
     font-color: white;
     margin-top: 20px;
-    width: 50%;
+    width: 70%;
     height: 50%;
     padding: 15px;
 }
@@ -33,10 +45,14 @@ th{
     border: none;
     border-collapse: collapse;
     background-color: #cceaff;
-    font-color: white;
     margin-top: 20px;
     width: 50%;
     height: 50%;
     padding: 15px;
 }
 
+tr{
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   font-size: 15px;
+   text-transform: uppercase  
+}
