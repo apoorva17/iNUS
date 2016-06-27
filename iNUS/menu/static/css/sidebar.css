@@ -1,6 +1,10 @@
 body{
   overflow: scroll;
   height: 100%;
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .sidenav {
@@ -19,19 +23,20 @@ body{
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 20px;
-    color: #818181;
+    font-size: 25px;
+    color: white;
+    font-family: "Copperplate";
     display: block;
-    transition: 0.3s;}
+    transition: 0.3s;
+}
 
-.sidenav a:hover, .offcanvas a:focus{
+.sidenav a:hover {
     color: #99d5ff;
 }
 
 .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px !important;
+    right: 10px;
     margin-left: 50px;
 }
