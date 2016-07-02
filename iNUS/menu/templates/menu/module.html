@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<div class="form-group">
+	<div class = "col-sm-6">
+		<label>Focus Area:</label>
+		<select class="form-control" id="focus_areas">
+			<option>Algorithms & Theory</option>
+			<option>Artificial Intelligence</option>
+			<option>Computer Graphics and Games</option>
+			<option>Computer Security</option>
+			<option>Database Systems</option>
+			<option>Multimedia Information Retrieval</option>
+			<option>Networking and Distributed Systems</option>
+			<option>Parallel Computing</option>
+			<option>Programming Languages</option>
+			<option>Software Engineering</option>
+		</select>
+
+		<button type="button" onclick="addFocusArea()">Select</button>
+
+		<ol id = "display"></ol>
+
+	</div>
+</div>
+
+<script>
+
+function addFocusArea(){
+	var list = document.getElementById('display');
+	var x = document.getElementById("focus_areas").value;
+	var y = document.createElement('BUTTON');
+	y.innerHTML = ('<a onclick = "delete(this)" > <span class="glyphicon glyphicon-remove-sign"></span> </a>');
+	var entry = document.createElement('li');
+	entry.appendChild(document.createTextNode(x));
+	entry.appendChild(y);
+	list.appendChild(entry);
+}
+
+function delete(node){    
+    r=node.parentNode.parentNode;
+    r.parentNode.removeChild(r);
+}   
+
+</script>
+
+
+</html>
