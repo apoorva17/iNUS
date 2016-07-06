@@ -1,16 +1,13 @@
-"""
-WSGI config for iNUS project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/
-"""
-
+# +++++++++++ DJANGO +++++++++++
 import os
+import sys
 
-from django.core.wsgi import get_wsgi_application
+## assuming your Django settings file is at '/home/my_username/projects/my_project/settings.py'
+path = '/home/jasmine/mynus/mynus/iNUS/iNUS'
+if path not in sys.path:
+    sys.path.append(path)
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "iNUS.settings")
+os.environ['DJANGO_SETTINGS_MODULE'] = 'iNUS.settings'
 
-application = get_wsgi_application()
+import django.core.handlers.wsgi
+application = django.core.handlers.wsgi.WSGIHandler()
