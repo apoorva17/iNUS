@@ -1,37 +1,20 @@
-// Get the <datalist> and <input> elements.
-var dataList = document.getElementById('json-datalist');
-var input = document.getElementById('inp1');
+var xmlhttp = new XMLHttpRequest();
+var url = "http://api.nusmods.com/2016-2017/moduleList.json";
 
-// Create a new XMLHttpRequest.
-var request = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    var myArr = JSON.parse(xmlhttp.responseText);
+    myFunction(myArr);
+  }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 
-// Handle state changes for the request.
-request.onreadystatechange = function(response) {
-      // Parse the JSON
-      var jsonOptions = JSON.parse(request.responseText);
-
-      // Loop over the JSON array.
-      jsonOptions.forEach(function(item) {
-        // Create a new <option> element.
-        var option = document.createElement('option');
-        // Set the value using the item in the JSON array.
-        option.value = item;
-        // Add the <option> element to the <datalist>.
-        dataList.appendChild(option);
-      });
-      
-      // Update the placeholder text.
-      input.placeholder = "ACC1002X";
-    } else {
-      // An error occured :(
-      input.placeholder = "Couldn't load datalist options :(";
-    }
-  };
+function myFunction(arr) {
+  var out = "";
+  var i;
+  for(i = 0; i < arr.length; i++) {
+    out += '<option value ="' + arr[i].ModuleCode + '">' + '</option>';
+  }
+  document.getElementById("mod").innerHTML = out;
 }
-
-// Update the placeholder text.
-input.placeholder = "Loading options...";
-
-// Set up and make the request.
-request.open('GET', 'http://api.nusmods.com/2015-2016/1/moduleCodes.json', true);
-request.send();
