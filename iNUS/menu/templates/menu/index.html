@@ -4,18 +4,18 @@
 
 <head>
 
-  <title>Years</title>
+  <title>myNUS</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href= "{% static 'css/sidebar.css' %}"/> 
   
   <link rel="stylesheet" type="text/css" href= "{% static 'css/form.css' %}"/> 
@@ -23,6 +23,9 @@
   <script type="text/javascript" src="{% static 'js/form.js' %}"></script>
 
   <script type="text/javascript" src="{% static 'js/dropdown.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'js/sidebar.js' %}"></script>
+
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
 </head>
@@ -32,13 +35,13 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="      glyphicon glyphicon-chevron-left"></span></a>
     <ul class="nav nav-pills nav-stacked">
-      <li class = "active"><a href="#main">Year 1</a></li>
-      <li><a href="#main">Year 2</a></li>
-      <li><a href="#main">Year 3</a></li>
-      <li><a href="#main">Year 4</a></li>
-      <li><a href="#main">Year 5</a></li>
-      <li><a href="#main">Year 6</a></li>
-      <li><a href="#main">Module Recommendation</a></li>
+      <li class = "active"><a href="../../menu/year1">Year 1</a></li>
+      <li><a href="../../menu/year2" >Year 2</a></li>
+      <li><a href="../../menu/year3">Year 3</a></li>
+      <li><a href="../../menu/year4">Year 4</a></li>
+      <li><a href="../../menu/year5">Year 5</a></li>
+      <li><a href="../../menu/year6">Year 6</a></li>
+      <li><a href="../../menu/module">Module Recommendation</a></li>
     </ul>
   </div>
   
@@ -50,8 +53,9 @@
         <fieldset>
           <legend align = "center"> <h3> Semester 1 </h3></legend>
           <div class="form-group">
-            <label for="Code">Module Code &nbsp;</label>
-            <input type = "text" id = "inp1" placeholder="ACC102X" />
+            <label>Module Code &nbsp;</label>
+            <input id = "inp1" type = text list="mod" placeholder="ACC1002X">
+            <datalist id="mod"> </datalist>
             <div class="form-group">
               <label for="Grade"> &nbsp; Grade &nbsp;</label>
               <select name="text" id = "inp2">
@@ -92,7 +96,7 @@
               </select>
             </div>
             <div class="form-group">
-              &nbsp;&nbsp;&nbsp;<button type = "button" onclick="addRow(1)" class= "btn btn-primary">Add</button>
+              &nbsp;&nbsp;&nbsp;<button id = "add" type = "button" onclick="addRow(1)" class= "btn btn-primary" onmousedown = "confirmInput()">Add</button>
             </div>
             <div class="form-group">
               <div class = "table">
@@ -115,4 +119,3 @@
 
 </body>
 </html>
-
