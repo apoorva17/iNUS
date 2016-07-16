@@ -1,22 +1,3 @@
-$(function() {
-   $("li").click(function() {
-      // remove classes from all
-      $("li").removeClass("active");
-      // add class to the one we clicked
-      $(this).addClass("active");
-   });
-})
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-
 function addRow(i) {
 
     switch(i){
@@ -66,7 +47,6 @@ function addRow(i) {
         table.children[0].appendChild(row);
 
         document.getElementById("inp4").value = "";
-        document.getElementById("inp4").placeholder = "ACC1002X";
         document.getElementById("inp5").value = "A+";
         document.getElementById("inp6").value = "4";
         break;
@@ -93,7 +73,6 @@ function addRow(i) {
         table.children[0].appendChild(row);
 
         document.getElementById("inp7").value = "";
-        document.getElementById("inp7").placeholder = "ACC1002X";
         document.getElementById("inp8").value = "A+";
         document.getElementById("inp9").value = "4";
         break;
@@ -120,7 +99,6 @@ function addRow(i) {
         table.children[0].appendChild(row);
 
         document.getElementById("inp10").value = "";
-        document.getElementById("inp10").placeholder = "ACC1002X";
         document.getElementById("inp11").value = "A+";
         document.getElementById("inp12").value = "4";
         break;
@@ -137,14 +115,16 @@ function deleteRow(node){
 }   
 
 
+//Error handling
+function confirmInput() {
+    fname = document.forms[0].inp1.value.length;
+    if(fname == 0){
+        alert("Module code is missing!!")
+    }
+}
+
 $(document).ready(function(){
 
-    //Error handling
-    var $code = document.getElementById("inp1").value;
-    if ($code == null) {
-        alert("Module Code missing!");
-    }
-    
     //Add Semester
     var $clone1 = $(".form").clone();
     $clone1.find("legend h3").text('Semester 2');
@@ -179,5 +159,3 @@ $(document).ready(function(){
 });
 
 $(document).ready(main);
-
-
