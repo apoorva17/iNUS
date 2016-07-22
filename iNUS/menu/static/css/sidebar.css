@@ -1,42 +1,34 @@
 body{
   overflow: scroll;
   height: 100%;
-  background: #43cea2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #24C6DC; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 25%;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
-    background-color: #66bfff;
+    left: 0;        
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    font-family: "Copperplate";
+    margin-left: 10%;
+    font-family: 'Domine', serif;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #99d5ff;
+    color: black;
 }
 
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    margin-left: 50px;
-}
+
