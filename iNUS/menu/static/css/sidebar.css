@@ -1,34 +1,23 @@
 body{
   overflow: scroll;
-  height: 100%;
   background: #24C6DC; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.sidenav {
-    height: 100%;
-    width: 25%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;        
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
+#mySidenav a {
     text-decoration: none;
     font-size: 20px;
-    color: white;
-    margin-left: 10%;
+    color: #c2f0f0;
     font-family: 'Domine', serif;
-    display: block;
-    transition: 0.3s;
 }
 
-.sidenav a:hover {
-    color: black;
+#mySidenav a:hover {
+  color: black;
+}
+
+#search{
+  color: black;
 }
 
 
