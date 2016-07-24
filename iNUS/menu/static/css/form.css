@@ -1,35 +1,35 @@
 .form{
-    padding: 25px;
-    width: 800px;
+    padding: 15px;
+    width: 430px; 
     position: relative;
     background-color: #99d5ff;
     overflow: auto;
     margin-top: 50px;
-    margin-left: 45%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .form h3{
-  font-size: 30px;
+  font-size: 28px;
   font-family: 'Special Elite', cursive;
 }
 
 .form label{
-  font-size: 25px;
+  font-size: 18px;
   font-family: 'Ropa Sans', sans-serif;
 }
 
 input{
-    padding: 8px;
+    padding: 2px;
     font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
+    font-size: 18px;
+    width: 103px;
 }
 
 select{
-    padding: 8px;
+    padding: 2px;
     font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 table, td{
@@ -37,17 +37,17 @@ table, td{
     border-collapse: collapse;
     background-color: #e6f5ff;
     font-color: white;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     width: 70%;
     height: 50%;
-    padding: 15px;
+    padding: 10px;
     font-family: 'Coming Soon', cursive;
 }
 
 th{
-     font-size: 20px;
-     border: none;
+    font-size: 18px;
+    border: none;
     border-collapse: collapse;
     background-color: #cceaff;
     margin-top: 20px;
@@ -58,7 +58,8 @@ th{
 }
 
 tr{
-   font-size: 20px;
+   font-size: 18px;
    text-transform: uppercase  
    font-family: 'Coming Soon', cursive;
 }
+
