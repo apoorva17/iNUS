@@ -114,30 +114,122 @@ function deleteRow(node){
     r.parentNode.removeChild(r);
 }   
 
+var myArr1 = [];
+var i = 0;
 
 //Error handling
 function confirmInput1() {
-    input1 = document.forms[0].inp1.value.length;
-    if(input1 == 0){
+
+    input1 = document.forms[0].inp1.value;
+    length1 = input1.length;
+
+    if(length1 == 0){
         alert("Module code for Semester 1 is missing! Please enter Module Code! :)")
     }
+
+    else{
+        myArr1[i] = input1;
+        i++;
+    }
+
+ 
+    var j;
+    var count = 0;
+    for(j=0; j < myArr1.length; j++) {
+
+        if(input1 == myArr1[j]){
+            count++;
+        }
+        if(count == 2){
+            alert("Duplicate Module Code!");
+            document.forms[0].inp1.value = "";
+            document.forms[0].inp1.placeholder = "ACC1002X";
+            count = 0;
+        }
+    }
+
 }
 function confirmInput4() {
-    input4 = document.forms[1].inp4.value.length;
-    if(input4 == 0){
+    input4 = document.forms[2].inp4.value;
+    length4 = input4.length;
+    if(length4 == 0){
         alert("Module code for Semester 2 is missing! Please enter Module Code! :)")
+    }
+    else{
+        myArr1[i] = input4;
+        i++;
+    }
+
+ 
+    var j;
+    var count = 0;
+    for(j=0; j < myArr1.length; j++) {
+
+        if(input4 == myArr1[j]){
+            count++;
+        }
+        if(count == 2){
+            alert("Duplicate Module Code!");
+            document.forms[2].inp4.value = "";
+            document.forms[2].inp4.placeholder = "ACC1002X";
+            count = 0;
+        }
     }
 }
 function confirmInput7() {
-    input7 = document.forms[2].inp7.value.length;
-    if(input7 == 0){
+    input7 = document.forms[1].inp7.value;
+    length7 = input7.length;
+
+    if(length7 == 0){
         alert("Module code for Special Term 1 is missing! Please enter Module Code! :)")
+    }
+        else{
+        myArr1[i] = input7;
+        i++;
+    }
+
+ 
+    var j;
+    var count = 0;
+    for(j=0; j < myArr1.length; j++) {
+
+        if(input7 == myArr1[j]){
+            count++;
+        }
+        if(count == 2){
+            alert("Duplicate Module Code!");
+            document.forms[1].inp7.value = "";
+            document.forms[1].inp7.placeholder = "ACC1002X";
+            count = 0;
+        }
     }
 }
 function confirmInput10() {
-    input10 = document.forms[3].inp10.value.length;
+
+    input10 = document.forms[3].inp10.value;
+    length10 = input10.length;
+
     if(input10 == 0){
         alert("Module code for Special Term 2 is missing! Please enter Module Code! :)")
+    }
+        else{
+        myArr1[i] = input10;
+        i++;
+    }
+
+    var j;
+    var count = 0;
+    for(j=0; j < myArr1.length; j++) {
+
+        if(input10 == myArr1[j]){
+            count++;
+        }
+        if(count == 2){
+            alert("Duplicate Module Code!");
+            document.forms[3].inp10.value = "";
+            document.forms[3].inp10.placeholder = "ACC1002X";
+            count = 0;
+        }
     }
 }
 
@@ -161,7 +253,6 @@ $(document).ready(function(){
     $clone2.find("button").attr("onmousedown", "confirmInput7()");
     $clone2.find("select[name = text]").attr("id", "inp8");
     $clone2.find("select[name = number]").attr("id", "inp9");
-    
 
     var $clone3 = $(".form").clone();
     $clone3.find("legend h3").text('Special Term 2');
@@ -173,9 +264,9 @@ $(document).ready(function(){
     $clone3.find("select[name = number]").attr("id", "inp12");
     
     
-    ($clone1).appendTo(".col-sm-8");
-    ($clone2).appendTo(".col-sm-8");
-    ($clone3).appendTo(".col-sm-8");
+    ($clone1).appendTo("#col2");
+    ($clone2).appendTo("#col1");
+    ($clone3).appendTo("#col2");
 
 });
 
