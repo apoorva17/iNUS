@@ -4,7 +4,7 @@
     position: relative;
     background-color: #99d5ff;
     overflow: auto;
-    margin-top: 50px;
+    margin-top: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
@@ -12,6 +12,13 @@
 .form h3{
   font-size: 28px;
   font-family: 'Special Elite', cursive;
+}
+
+h4{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align:center;
 }
 
 .form label{
@@ -62,4 +69,3 @@ tr{
    text-transform: uppercase  
    font-family: 'Coming Soon', cursive;
 }
-
