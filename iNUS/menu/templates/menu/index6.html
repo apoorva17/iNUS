@@ -1,0 +1,152 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+  <title>myNUS</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- AJAX -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href= "{% static 'css/sidebar.css' %}"/> 
+  <link rel="stylesheet" type="text/css" href= "{% static 'css/form.css' %}"/> 
+  <link rel="stylesheet" type="text/css" href= "{% static 'css/social.css' %}"/> 
+
+  <!-- JS -->
+  <script type="text/javascript" src="{% static 'js/form.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/dropdown.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/table6.js' %}"></script>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Domine|Homemade+Apple|Luckiest+Guy|Patrick+Hand|Ropa+Sans|Special+Elite|Noto+Sans:700" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class = "container-fluid">
+    <div class = "row">
+
+      <div class = "col-sm-3" id="mySidenav">
+        <ul class="nav nav-pills nav-stacked">
+          <li><img src="../../static/logo.png" style="width:60%;height:30%;margin-left:30px; padding-bottom: 15px;padding-top: 10px;"></li>
+          <li><a href="../../menu/year1">Year 1</a></li>
+          <li><a href="../../menu/year2" >Year 2</a></li>
+          <li><a href="../../menu/year3">Year 3</a></li>
+          <li><a href="../../menu/year4">Year 4</a></li>
+          <li><a href="../../menu/year5">Year 5</a></li>
+          <li><a href="../../menu/year6">Year 6</a></li>
+          <li><a href="../../menu/module">Module Recommendation</a></li>
+          <li><a> Search Module: <br>
+            <input id = "search" type = text list="mod" placeholder="ACC1002X">
+            <datalist id="mod"> </datalist> 
+            <button class="btn btn-info"> 
+              <span class = "glyphicon glyphicon-search"> </span> 
+            </button></a></li>
+            <li>
+              <div class="wrapper">
+                <ul class="social-icons icon-circle list-unstyled list-inline">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a> </li> 
+                  <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
+                  <li><a href="https://github.com/apoorva17/mynus"><i class="fa fa-github"></i></a> </li>   
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+        <div id = "year6">
+        <h4> YEAR 6 <span> <i class="fa fa-smile-o"></i> <button class = "btn btn-warning" onclick = "addStorage6()"> Save changes! </button> </span> </h4>
+          <div class = "col-sm-4" id = "col1"> 
+            <div class = "form">
+              <form class = "form-inline" id = "myForm" method = "GET">
+                <fieldset>
+                  <legend align = "center"> <h3> Semester 1 </h3></legend>
+                  <div class="form-group">
+                    <label>Module Code</label>
+                    <input id = "inp1" type = text list="mod" placeholder="ACC1002X">
+                    <datalist id="mod"> </datalist>
+                  </div>
+                  <div class="form-group">
+                    <label>Grade</label>
+                    <select name="text" id = "inp2">
+                      <option selected>A+</option>
+                      <option>A</option>
+                      <option>A-</option>
+                      <option>B+</option>
+                      <option>B</option>
+                      <option>C+</option>
+                      <option>C</option>
+                      <option>D</option>
+                      <option>S</option>
+                      <option>U</option>
+                      <option>CS</option>
+                      <option>CU</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>MC</label>
+                    <select name="number" id = "inp3">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option selected>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>12</option>
+                      <option>14</option>
+                      <option>15</option>
+                      <option>16</option>
+                      <option>20</option>
+                      <option>24</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button id = "add" type = "button" onclick="addRow(1)" class="btn btn-primary btn-xs" onmousedown="confirmInput1()"><span class="glyphicon glyphicon-plus"></span></button>
+                  </div>
+                  <div class="form-group">
+                    <div class = "table">
+                      <table id = "table" border="1" style="width:100%">
+                        <tr>
+                          <th><b>Module Code</b></th>
+                          <th><b>Grade</b></th> 
+                          <th><b>MC</b></th>
+                          <th><b>-</b></th>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+
+
+          <div class = "col-sm-4" id = "col2">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  </html>
