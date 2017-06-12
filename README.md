@@ -1,3 +1,3 @@
 # iNUS
 
-<img src="poster.png>
+<img src="poster.png">
