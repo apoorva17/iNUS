@@ -1,5 +1,15 @@
 # myNUS
 
-myNUS is an online gradebook for NUS students built using Django Web Framework (Python). Minus the hassle with myNUS!
+<h3> Miarva presents myNUS! myNUS is an online gradebook for NUS students by NUS students, built using Django Web Framework (Python) </h3>
 
-<img src="poster.png">
+<b> Personalize your academic life! </b>
+
+<li> List the modules taken and your grades for each semester </li>
+<li> Recommend modules based on your focus area </li>
+<li> List the prerequisites for the module, and the prerequisites for the prerequisites </li>
+
+Minus the Hassle with myNUS!
+
+
+
+
