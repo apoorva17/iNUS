@@ -9,8 +9,6 @@
 <li> Recommend modules based on your focus area </li>
 <li> List the prerequisites for the module, and the prerequisites for the prerequisites </li>
 
-Minus the Hassle with myNUS!
-
 </p>
 
 
